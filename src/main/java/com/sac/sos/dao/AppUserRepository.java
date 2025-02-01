@@ -13,4 +13,7 @@ public interface AppUserRepository extends JpaRepository<AppUser, Long> {
     AppUser findAppUserByIdAndDeleted(Long appUserId, String deleted);
 
     Boolean existsByUsername(String username);
+
+    AppUser findByUsername(String username);
+
 }
