@@ -2,14 +2,16 @@ package com.sac.sos.service.appUser;
 
 import com.sac.sos.dao.AppUserRepository;
 import com.sac.sos.model.AppUser;
-import com.sac.sos.utils.Constant;
 import com.sac.sos.utils.enumConstant.YNStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import static com.sac.sos.utils.Constant.CURRENT_USER_NAME;
 
 @Service
 @Transactional
@@ -17,6 +19,9 @@ public class AppUserServiceImpl implements AppUserService {
 
     @Autowired
     private AppUserRepository appUserRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -31,8 +36,8 @@ public class AppUserServiceImpl implements AppUserService {
 
     @Override
     public AppUser saveAppUser(AppUser appUser) {
-        appUser.setPassword(Constant.PASSWORD);
-        appUser.setCreatedBy(Constant.CURRENT_USER_NAME);
+        appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
+        appUser.setCreatedBy(CURRENT_USER_NAME);
         appUser.setCreatedOn(LocalDateTime.now());
         appUser.setDeleted(YNStatus.NO.getStatus());
         return appUserRepository.save(appUser);
@@ -40,7 +45,7 @@ public class AppUserServiceImpl implements AppUserService {
 
     @Override
     public AppUser updateAppUser(AppUser appUser) {
-        appUser.setUpdatedBy(Constant.CURRENT_USER_NAME);
+        appUser.setUpdatedBy(CURRENT_USER_NAME);
         appUser.setUpdatedOn(LocalDateTime.now());
         return appUserRepository.save(appUser);
     }
@@ -48,7 +53,7 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public AppUser deleteAppUser(Long appUserId) {
         AppUser appUser = appUserRepository.findAppUserByIdAndDeleted(appUserId, YNStatus.NO.getStatus());
-        appUser.setUpdatedBy(Constant.CURRENT_USER_NAME);
+        appUser.setUpdatedBy(CURRENT_USER_NAME);
         appUser.setDeleted(YNStatus.YES.getStatus());
         appUser.setUpdatedOn(LocalDateTime.now());
         return appUser;
