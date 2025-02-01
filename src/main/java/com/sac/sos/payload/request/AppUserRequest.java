@@ -13,6 +13,7 @@ public class AppUserRequest {
     private String name;
     private String username;
     private String contactNumber;
+    private String password;
     private String email;
 
     public AppUser createEntity() {
@@ -20,6 +21,7 @@ public class AppUserRequest {
                 .name(this.name)
                 .username(this.username)
                 .contactNumber(this.contactNumber)
+                .password(this.password)
                 .email(this.email)
                 .build();
     }

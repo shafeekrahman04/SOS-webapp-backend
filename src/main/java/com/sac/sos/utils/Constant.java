@@ -1,7 +1,9 @@
 package com.sac.sos.utils;
 
-public class Constant {
+public interface Constant {
 
-    public static  String CURRENT_USER_NAME = "ASTA_SYSTECH";
-    public static  String PASSWORD = "mstructure@123";
+    String CURRENT_USER_NAME = "ASTA_SYSTECH";
+    String PASSWORD = "mstructure@123";
+    String AUTH_FAILURE_DESC = "Invalid username /password";
+    String AUTH_SCUCCESS_DESC = "Authentication successful";
 }
