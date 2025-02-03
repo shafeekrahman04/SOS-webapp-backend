@@ -18,7 +18,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
@@ -40,10 +43,12 @@ public class AuthController {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
         } catch (Exception ex) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(AuthResponse.createResponse(null, true));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(AuthResponse.createResponse(null, true, null));
         }
         String token = jwtUtil.generateToken(authRequest.getUsername());
-        return ResponseEntity.status(HttpStatus.CREATED).header(HttpHeaders.AUTHORIZATION, token).body(AuthResponse.createResponse(token, false));
+        AppUser loggedInUser = appUserService.findAppUserByUsername(authRequest.getUsername());
+        AppUserResponse userResponse = AppUserResponse.createResponse(loggedInUser);
+        return ResponseEntity.status(HttpStatus.CREATED).header(HttpHeaders.AUTHORIZATION, token).body(AuthResponse.createResponse(token, false, userResponse));
     }
 
     @PostMapping("/register")

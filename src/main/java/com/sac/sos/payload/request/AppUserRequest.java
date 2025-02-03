@@ -14,7 +14,6 @@ public class AppUserRequest {
     private String username;
     private String contactNumber;
     private String password;
-    private String email;
 
     public AppUser createEntity() {
         return AppUser.builder()
@@ -22,7 +21,6 @@ public class AppUserRequest {
                 .username(this.username)
                 .contactNumber(this.contactNumber)
                 .password(this.password)
-                .email(this.email)
                 .build();
     }
 
@@ -30,7 +28,6 @@ public class AppUserRequest {
         appUser.setName(this.name);
         appUser.setUsername(this.username);
         appUser.setContactNumber(this.contactNumber);
-        appUser.setEmail(this.email);
         return appUser;
     }
 
