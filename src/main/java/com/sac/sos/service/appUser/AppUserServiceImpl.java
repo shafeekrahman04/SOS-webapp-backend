@@ -64,4 +64,9 @@ public class AppUserServiceImpl implements AppUserService {
     public Boolean existsByUsername(String username) {
         return appUserRepository.existsByUsername(username);
     }
+
+    @Override
+    public AppUser findAppUserByUsername(String username) {
+        return appUserRepository.findByUsername(username);
+    }
 }

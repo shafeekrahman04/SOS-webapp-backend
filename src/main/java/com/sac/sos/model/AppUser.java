@@ -32,9 +32,6 @@ public class AppUser {
     @Column(name = "CONTACT_NUMBER")
     private String contactNumber;
 
-    @Column(name = "EMAIL")
-    private String email;
-
     @Column(name = "DELETED")
     private String deleted;
 

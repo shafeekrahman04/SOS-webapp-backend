@@ -17,4 +17,6 @@ public interface AppUserService {
 
     Boolean existsByUsername(String username);
 
+    AppUser findAppUserByUsername(String username);
+
 }
