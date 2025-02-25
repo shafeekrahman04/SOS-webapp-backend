@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="35592336-fb68-456d-b722-5d9ad62d55cc" name="Changes" comment="" />
+    <list default="true" id="ccf46479-71c5-4f4c-974a-a5fcb7251d9f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/EmergencyContactApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/controller/EmergencyContactController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/dao/EmergencyContactRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/model/EmergencyContact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/payload/request/EmergencyContactRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/payload/response/EmergencyContactResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/reftype/YNStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/service/emergencyContact/EmergencyContactService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/java/com/example/Emergency/Contact/service/emergencyContact/EmergencyContactServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emergency-Contact/src/test/java/com/example/Emergency/Contact/EmergencyContactApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sac/sos/controller/EmergencyContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sac/sos/controller/EmergencyContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,9 +48,38 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Astasystech/Projects/New Project(SAC)/SOS-webapp-backend"
+    "last_opened_file_path": "C:/SHAFEEK-ASTA/SAC_PROJECT/SOS/SOS-webapp-backend"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

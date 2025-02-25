@@ -1,11 +1,9 @@
 package com.sac.sos.controller;
 
-import com.sac.sos.model.AppUser;
 import com.sac.sos.model.EmergencyContact;
 import com.sac.sos.payload.ApiError;
 import com.sac.sos.payload.ApiResponse;
 import com.sac.sos.payload.request.EmergencyContactRequest;
-import com.sac.sos.payload.response.AppUserResponse;
 import com.sac.sos.payload.response.EmergencyContactResponse;
 import com.sac.sos.service.emergencyContactService.EmergencyContactService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +30,7 @@ public class EmergencyContactController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ApiResponse<>(false, null, error));
         }
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<EmergencyContactResponse>> getEmergencyContactById(@PathVariable("id") long id) {
         try {
