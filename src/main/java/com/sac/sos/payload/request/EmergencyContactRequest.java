@@ -1,6 +1,5 @@
 package com.sac.sos.payload.request;
 
-import com.sac.sos.model.AppUser;
 import com.sac.sos.model.EmergencyContact;
 import lombok.*;
 
