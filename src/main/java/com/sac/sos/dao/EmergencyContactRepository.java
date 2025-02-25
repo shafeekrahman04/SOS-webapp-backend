@@ -9,5 +9,7 @@ import java.util.List;
 @Repository
 public interface EmergencyContactRepository extends JpaRepository<EmergencyContact, Long> {
 
-    List<EmergencyContact> findAllByAppUserIdAndDeleted(Long appUserId,String deleted);
+    List<EmergencyContact> findAllByAppUserIdAndDeleted(Long appUserId, String deleted);
+
+    EmergencyContact findByIdAndDeleted(Long id, String deleted);
 }
