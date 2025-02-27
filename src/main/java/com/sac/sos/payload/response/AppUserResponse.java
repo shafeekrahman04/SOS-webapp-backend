@@ -17,6 +17,7 @@ public class AppUserResponse {
     private String name;
     private String username;
     private String contactNumber;
+    private String email;
 
     public static AppUserResponse createResponse(AppUser appUser) {
         return AppUserResponse.builder()
@@ -24,6 +25,7 @@ public class AppUserResponse {
                 .name(appUser.getName())
                 .username(appUser.getUsername())
                 .contactNumber(appUser.getContactNumber())
+                .email(appUser.getEmail())
                 .build();
     }
 

@@ -17,6 +17,7 @@ public class EmergencyContactResponse {
     private String name;
     private String contactNumber;
     private Long appUserId;
+    private String email;
 
     public static EmergencyContactResponse createResponse(EmergencyContact emergencyContact) {
         return EmergencyContactResponse.builder()
@@ -24,6 +25,7 @@ public class EmergencyContactResponse {
                 .name(emergencyContact.getName())
                 .contactNumber(emergencyContact.getContactNumber())
                 .appUserId(emergencyContact.getAppUserId())
+                .email(emergencyContact.getEmail())
                 .build();
     }
 
