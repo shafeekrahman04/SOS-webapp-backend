@@ -12,6 +12,7 @@ public class EmergencyContactRequest {
     private Long id;
     private Long appUserId;
     private String name;
+    private String email;
     private String contactNumber;
 
     public EmergencyContact createEntity() {
@@ -19,6 +20,7 @@ public class EmergencyContactRequest {
                 .name(this.name)
                 .appUserId(this.appUserId)
                 .contactNumber(this.contactNumber)
+                .email(this.email)
                 .build();
     }
 
@@ -26,6 +28,7 @@ public class EmergencyContactRequest {
         emergencyContact.setName(this.name);
         emergencyContact.setAppUserId(this.appUserId);
         emergencyContact.setContactNumber(this.contactNumber);
+        emergencyContact.setEmail(this.email);
         return emergencyContact;
     }
 }

@@ -24,6 +24,8 @@ public class EmergencyContact {
     private String name;
     @Column(name = "CONTACT_NUMBER")
     private String contactNumber;
+    @Column(name = "EMAIL")
+    private String email;
     @Column(name = "APP_USER_ID")
     private Long appUserId;
     @Column(name = "DELETED")
